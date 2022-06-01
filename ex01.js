@@ -12,7 +12,7 @@ for (let i = 0; i < linhas; i++) {
     arrayNovo[i][j] = "";
   }
 }
-
+console.log(arrayNovo);
 let element = 0;
 
 for (let l = 0; l < linhas; l++) {
@@ -36,3 +36,4 @@ for (let L = 0; L < linhas; L++) {
 }
 
 console.log(valoresArray);
+console.log(arrayNovo);
