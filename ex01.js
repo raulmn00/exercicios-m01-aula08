@@ -13,34 +13,16 @@ e imprima essas informações na forma de uma tabela como no exemplo de 3 linhas
 let linhas = +prompt("Digite a quantidade de linhas: ");
 let colunas = +prompt("Digite a quantidade de colunas: ");
 
-let arrayNovo = [];
+let arrayLinhas = [];
 
 for (let i = 0; i < linhas; i++) {
-  arrayNovo[i] = [];
+  let arrayColunas = [];
   for (let j = 0; j < colunas; j++) {
-    arrayNovo[i][j] = "";
+    arrayColunas.push(j + i);
   }
-}
-let element = 0;
-
-for (let l = 0; l < linhas; l++) {
-  for (let c = 0; c < colunas; c++) {
-    arrayNovo[l][c] = element;
-    element++;
-  }
+  arrayLinhas.push(arrayColunas);
 }
 
-let valoresArray = '';
-for (let L = 0; L < linhas; L++) {
-    for (let C = 0; C < colunas; C++) {
-        if(C < colunas - 1){
-            valoresArray += arrayNovo[L][C] + "\t";
-        }else {
-            valoresArray += arrayNovo[L][C] + "\n";
-        }
-        
-    }
-    
+for(let linha of arrayLinhas){
+  console.log(linha);
 }
-
-console.log(valoresArray);
